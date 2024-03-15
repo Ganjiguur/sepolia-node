@@ -43,6 +43,7 @@ In this documentation, I will document the progress and useful commands for the 
 -   **Finality:** Participating in the process of finalizing blocks, making them irreversible.
 
 **Validator client (Optional)** - is a specific type of software that is responsible for managing a validator's operations in the proof-of-stake (PoS) consensus mechanism. Validators are participants in the network who are responsible for proposing new blocks, attesting to the validity of blocks, and helping to secure the network. To become a validator on the Ethereum 2.0 network, a participant must deposit 32 ETH into the deposit contract on the Ethereum 1.0 chain. This deposit is managed by the validator client and is used to incentivize honest participation in the network.
+
 **MEV & Flashbots (Optional)** - "Miner Extractable Value" (or "Maximal Extractable Value" in the broader sense). It refers to the additional value that miners (or validators in a proof-of-stake system) can extract from their ability to include, exclude, or reorder transactions within the blocks they produce.
 
 # Installation try 1
@@ -64,7 +65,7 @@ Before this, I created a VPS on AWS.
 - 15 GB SSD disk.
 It froze during installation because the docker images and accompanying software totaled more than 15GB.
 
-![alt text](image-1.png)
+![alt text](/pics/image-1.png)
 
 Then I created a VPS with 50 GB of disks and 8 GB of RAM. The installation was successful, but suddenly Grafana Dashboard and the node stopped synchronizing. I'm troubleshooting all the services, but the services are working correctly. I found that the disk is full because the node is synchronizing all blocks (Genesis) and the total size is over 50GB.
 
@@ -100,8 +101,8 @@ Command set:
 	- `./ethd up`
 	- This command will setup and start all docker containers that was defined in the `.env` config file.
 
-![alt text](image.png)
-![alt text](image-2.png)
+![alt text](/pics/image.png)
+![alt text](/pics/image-2.png)
 
 - All available services `docker ps -a`
 
@@ -114,7 +115,7 @@ Command set:
 
 Check the node is syncing
 
-![alt text](image-3.png)
+![alt text](/pics/image-3.png)
 
 `time="2024-03-14 14:57:12" level=info msg="Synced new block" block=0xd67510ef... epoch=142433 finalizedEpoch=142431 finalizedRoot=0xbf48480d... prefix=blockchain slot=4557886`
 
@@ -125,11 +126,11 @@ Check the node is syncing
 
 To enter to CLI mode of Geth.
 
-![alt text](image-4.png)
+![alt text](/pics/image-4.png)
 
 `eth` command to check available functions and basic informations
 
-![alt text](image-5.png)
+![alt text](/pics/image-5.png)
 
 To check:
  - Current block height
@@ -145,7 +146,7 @@ Write a simple script (in your language of choice) that periodically checks the 
 
 I prepared a python code script to periodically check the status of those basic informations - `script.py`
 
-![alt text](image-7.png)
+![alt text](/pics/image-7.png)
 
 There should more simple solutions such as AWS lambda or Adding a widget on Grafana.
 
