@@ -1,4 +1,4 @@
-# Jiguur - Running Ethereum nodes on Sepolia testnet
+# Running Ethereum nodes on Sepolia testnet
 
 In this documentation, I will document the progress and useful commands for the homework assignment of running an eth node with the sepolia testnet.
 
